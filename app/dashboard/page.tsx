@@ -20,7 +20,13 @@ import {
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { ChartSections } from "@/components/chart";
+import { Stats } from "@/components/utils/dashboard/stats";
+import { CardsMetric } from "@/components/utils/dashboard/metric";
+import { SectionCards } from "@/components/utils/dashboard/section-cards";
+import { ChartAreaInteractive } from "@/components/utils/dashboard/chart-area-interactive";
 
+import data from './data.json';
+import { DataTable } from "@/components/utils/dashboard/data-table";
 export default function DashboardPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   if (!sidebar) return null;
@@ -40,7 +46,7 @@ export default function DashboardPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <TooltipProvider>
+      {/* <TooltipProvider>
         <div className="flex gap-6 mt-6">
           <Tooltip>
             <TooltipTrigger asChild>
@@ -73,8 +79,23 @@ export default function DashboardPage() {
             </TooltipContent>
           </Tooltip>
         </div>
-      </TooltipProvider>
-      <ChartSections />
+      </TooltipProvider> */}
+      {/* <ChartSections /> */}
+      <div className="mt-6 flex flex-col gap-6">
+        <Stats />
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+              <SectionCards />
+              <CardsMetric />
+              <div className="px-4 lg:px-6">
+                <ChartAreaInteractive />
+              </div>
+              <DataTable data={data} />
+            </div>
+          </div>
+        </div>
+      </div>
     </ContentLayout>
   );
 }

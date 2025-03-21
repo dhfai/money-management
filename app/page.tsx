@@ -71,7 +71,7 @@ export default function HomePage() {
           </section>
           <div className="w-full flex justify-center relative">
             <Image
-              src="/image.png"
+              src="/demo-light-min.png"
               width={1080}
               height={608}
               alt="demo"
@@ -79,7 +79,7 @@ export default function HomePage() {
               className="border rounded-xl shadow-sm dark:hidden"
             />
             <Image
-              src="/image.png"
+              src="/demo-dark-min.png"
               width={1080}
               height={608}
               alt="demo-dark"
