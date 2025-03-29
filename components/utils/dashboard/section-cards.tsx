@@ -38,7 +38,7 @@ export function SectionCards() {
         <CardHeader className="relative">
           <CardDescription>BTC/USD</CardDescription>
           <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
-            1,234
+          $1,234
           </CardTitle>
           <div className="absolute right-4 top-4">
             <Badge variant="outline" className="flex gap-1 rounded-lg text-xs">
@@ -60,7 +60,7 @@ export function SectionCards() {
         <CardHeader className="relative">
           <CardDescription>USD/USD</CardDescription>
           <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
-            45,678
+          $45,678
           </CardTitle>
           <div className="absolute right-4 top-4">
             <Badge variant="outline" className="flex gap-1 rounded-lg text-xs">
@@ -80,7 +80,7 @@ export function SectionCards() {
         <CardHeader className="relative">
           <CardDescription>GBP/JPY</CardDescription>
           <CardTitle className="@[250px]/card:text-3xl text-2xl font-semibold tabular-nums">
-            4.5%
+          $4.5
           </CardTitle>
           <div className="absolute right-4 top-4">
             <Badge variant="outline" className="flex gap-1 rounded-lg text-xs">
